@@ -3,9 +3,13 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Content from './components/Content';
-import Card from './components/Card'; // Assuming the Card component is in the same directory
-import './App.css'; // Import your global styles
-import './styles/Content.css'; // Import the Content component styles
+import Card from './components/Card';
+import Table from './components/Table'; 
+import Footer from './components/Footer';
+import './App.css';
+import './styles/Content.css'; 
+
+import PieChartPage from './components/PieChart';
 
 const App = () => {
   return (
@@ -13,6 +17,7 @@ const App = () => {
       <Navbar />
       <Content />
       <Card/>
+      <Table/>
     </>
   );
 };
