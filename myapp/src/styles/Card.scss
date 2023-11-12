@@ -99,7 +99,7 @@ h1+p, p+p {
 .card {
   position: relative;
   flex: 0 0 240px;
-  width: 255px;
+  width: 245px;
   height: 383px;
   background-color: #333;
   overflow: hidden;
@@ -184,7 +184,7 @@ h1+p, p+p {
   border-bottom: 2px solid var(--primary-color);
   margin-bottom: 20px;
   margin-left: 25px;
-  margin-top: 2%; /* Add some margin to the left for .startup-heading */
+  margin-top: 0%; /* Add some margin to the left for .startup-heading */
   padding-bottom: 5px; /* Adjust as needed */
   padding-right: 20px; /* Increase padding to the right */
 }
