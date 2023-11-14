@@ -55,7 +55,7 @@ const Card = ({ dataImage, title, content }) => {
       <div className="card">
         <div className="card-bg" style={{ ...cardBgStyle, backgroundImage: `url(${dataImage})` }}></div>
         <div className="card-info" style={cardInfoStyle}>
-          <h1 style={titleStyle}>{title}</h1>
+          <h2 style={titleStyle}>{title}</h2>
           <p style={pStyle}>{content}</p>
         </div>
       </div>
@@ -91,4 +91,3 @@ const App = () => {
 };
 
 export default App;
-
