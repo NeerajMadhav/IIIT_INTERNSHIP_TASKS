@@ -1,71 +1,79 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: whitesmoke;
-  }
-  
-  table {
-    width: 100%;
-    border-spacing: 0;
-    margin-top: 20px;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: left;
+  color: whitesmoke;
+  margin-left: 10px;
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: rgb(75, 70, 70);
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles for Table Content */
+@media screen and (max-width: 600px) {
   th,
   td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  th {
-    background-color: rgb(75, 70, 70);
+  th:nth-child(1),
+  td:nth-child(1) {
+    min-width: 150px; /* Adjust as needed */
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    min-width: 150px; /* Adjust as needed */
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    min-width: 250px; /* Adjust as needed */
   }
   
-  a {
-    color: #0066cc;
-    text-decoration: none;
+  /* Add similar rules for other columns as needed */
+  
+  h1 {
+    font-size: 18px;
   }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive Styles for Table Content */
-  @media screen and (max-width: 600px) {
-    th,
-    td {
-      padding: 8px;
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    
-    th:nth-child(1),
-    td:nth-child(1) {
-      min-width: 150px; /* Adjust as needed */
-    }
-  
-    th:nth-child(2),
-    td:nth-child(2) {
-      min-width: 150px; /* Adjust as needed */
-    }
-  
-    th:nth-child(3),
-    td:nth-child(3) {
-      min-width: 250px; /* Adjust as needed */
-    }
-    
-    /* Add similar rules for other columns as needed */
-    
-    h1 {
-      font-size: 18px;
-    }
-  }
-  
+}
