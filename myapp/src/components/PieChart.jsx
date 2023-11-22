@@ -58,8 +58,8 @@ const FourPieCharts = () => {
           { name: 'E-commerce', y: 20 },
           { name: 'Artificial Intelligence', y: 15 },
           { name: 'Healthcare Technology', y: 10 },
-          { name: 'Consumer Electronics', y: 10 },
-          { name: 'Other', y: 20 },
+          // { name: 'Consumer Electronics', y: 10 },
+          { name: 'Other', y: 30 },
         ],
       },
     ],
@@ -128,6 +128,7 @@ const FourPieCharts = () => {
 
   
   return (
+    <section id="Piecharts">
     <div>
       <p> </p>
       <h2 className="main-heading">PieChart Analysis</h2>
@@ -146,6 +147,7 @@ const FourPieCharts = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 
