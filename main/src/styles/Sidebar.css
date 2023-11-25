@@ -1,0 +1,49 @@
+.sidebar {
+  padding-top: 20px;
+  height: 100vh;
+  position: fixed;
+  background-color: #1b1b1d;
+  transition: all 0.3s;
+  width: 0;
+  overflow-x: hidden;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.close-btn {
+  position: absolute;
+  margin-top:2px;
+  margin-left:180px;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Updated styles for list items and anchor elements */
+.sidebar ul {
+  list-style: none; /* Remove default list styles (dots) */
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px; /* Add spacing between the texts */
+  text-align: center; /* Center-align the text */
+
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  display: block; /* Make anchor elements block-level for full-width */
+  text-align: left;
+  
+}
+
+

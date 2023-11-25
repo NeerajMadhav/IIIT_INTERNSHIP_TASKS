@@ -1,0 +1,88 @@
+/* Add the following styles to center the social media icons */
+.footer {
+  background-color: rgb(19, 15, 15) !important;
+  color: var(--white-color) !important;
+  padding: 0.5rem !important; /* Adjust the padding as needed */
+  text-align: center !important;
+}
+
+.footer__links {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center;
+}
+
+.footer__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.7rem; /* Adjust the gap between icons as needed */
+  justify-content: center; /* Center the icons horizontally */
+}
+
+.footer__item {
+  display: inline-block;
+  padding-right: 0.3rem;
+  padding-top: 0.5rem;
+}
+
+.footer__link img {
+  width: 17px; /* Adjust the width of the images as needed */
+  height: 17px;
+  padding-right: 0px; /* Adjust the height of the images as needed */
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--white-color);
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--primary-color);
+}
+
+.footer__bottom {
+  margin-top: 0.5rem;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.3rem !important;
+  }
+
+  .footer__item {
+    padding-top: 0.3rem;
+  }
+
+  .footer__link img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .footer__bottom {
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Additional media queries for specific devices */
+@media (max-width: 320px) {
+  /* Styles for iPhone SE */
+  /* Adjust as needed */
+}
+
+@media (max-width: 375px) {
+  /* Styles for iPhone XR */
+  /* Adjust as needed */
+}
+
+@media (max-width: 414px) {
+  /* Styles for iPhone 12 Pro */
+  /* Adjust as needed */
+}
+
+/* Add more media queries for other devices as needed */

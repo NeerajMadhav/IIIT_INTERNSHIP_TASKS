@@ -1,0 +1,32 @@
+.back-to-top {
+    position: fixed;
+    font-size: 50px;
+    bottom: 10px; /* Adjust as needed */
+    right: 2px; /* Adjust as needed */
+    opacity: 0;
+    color: azure;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+    text-decoration: none;
+  }
+  
+  .back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* .arrow {
+    display: inline-block;
+    width: 80px; 
+    height: 80px; 
+    border: 3px solid white; 
+    transform: rotate(-45deg); 
+    margin-bottom: 5px; 
+  } */
+  
+  .vertical-text{
+    padding: 1ch;
+    height: 40rem;
+    width: 30rem;
+  }

@@ -1,0 +1,184 @@
+/* Fonts */
+
+
+/* Colors */
+:root {
+  --primary-color: hsl(9, 94%, 61%);
+  --primary-color-alt: hsl(28, 72%, 83%);
+  --second-color: #3e537c;
+  --second-color-alt: hwb(220 24% 52% / 0.65);
+  --third-color: hsl(220, 36%, 28%);
+  --white-color: #fbfbfb;
+  --white-color-alt: hsl(12, 14%, 93%);
+  --dark-color: hsl(300, 100%, 0%);
+  --navbar-transparency: 0.9; /* Adjust the transparency value */
+}
+/* Navbar.css */
+
+body {
+  margin: 0; /* Remove default margin to ensure full width */
+}
+
+.navbar {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgb(19, 15, 15); /* Adjust background color as needed */
+  color: var(--white-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+
+
+.navbar__logo {
+  font-size: 3rem;
+  margin-right: auto;
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+}
+
+.navbar__item {
+  margin: 0 1rem;
+}
+
+.navbar__link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--white-color);
+  transition: color 0.3s;
+}
+
+.navbar__link:hover {
+  color: var(--primary-color);
+}
+
+/* Navbar Search Styles */
+.navbar__search {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem; /* Adjust the spacing between logo and search bar */
+}
+
+.navbar__search input {
+  padding: 1rem; /* Increased padding for a larger search bar */
+  font-size: 1rem;
+  border: none;
+  background-color: rgba(255, 255, 255, var(--navbar-transparency)); /* Use rgba for transparency */
+  color: var(--second-color-alt);
+  transition: background-color 300ms;
+  border-radius: 20px; /* Increased border-radius for rounded corners */
+  width: 300px; /* Adjusted width for a wider search bar */
+}
+
+.navbar__search input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 1); /* Fully opaque on focus */
+}
+
+/* Add search and clear symbols */
+.navbar__search-icons {
+  display: flex;
+  margin-left: 0.5rem; /* Adjust spacing between search bar and icons */
+}
+
+.navbar__search-icon {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* Add these styles to your Navbar.css or your global styles */
+.clear-button {
+  background: none;
+  color: #9e9696;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Adjust font size as needed */
+  margin-left: 8px; /* Adjust margin as needed */
+  position: relative;
+  top: -14px; /* Adjust the vertical position as needed */
+}
+
+.clear-button:hover {
+  color: rgb(135, 126, 126); /* Adjust hover color as needed */
+  background: none;
+}
+.search-results {
+  position: absolute;
+  top: 100%; /* Position below the search bar */
+  left: 0;
+  width: 100%;
+  max-height: 200px; /* Set a fixed height for the search results container */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
+  background-color: #666060; /* Adjust background color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 1001; /* Ensure the search results are above the navbar */
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Add a border between search results */
+}
+
+.menu-btn{
+background-color: rgb(19, 15, 15); /* Adjust background color as needed */
+color:#9e9696;
+margin-left: -2%;
+}
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, var(--navbar-transparency)); /* Adjust background color for overlay effect */
+    position: absolute;
+    top: 70px; /* Adjust top position */
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 1; /* Ensure menu is above other content */
+  }
+
+  .navbar__menu.active {
+    display: flex;
+  }
+
+  .navbar__item {
+    margin: 0.5rem 0; /* Adjust margin for smaller screens */
+  }
+
+  .navbar__search {
+    flex: 1; /* Allow search bar to take remaining space */
+    justify-content: flex-end; /* Align search bar to the right */
+    margin-left: 0; /* Remove margin for smaller screens */
+  }
+
+  .navbar__search input {
+    width: 100%; /* Take full width of the container */
+  }
+}
